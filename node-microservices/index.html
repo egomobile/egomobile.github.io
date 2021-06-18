@@ -217,6 +217,26 @@
 							<td><code>false</code></td>
 						</tr>
 						<tr>
+							<td><code>LOG_LEVEL</code></td>
+							<td>The name of the <a href="https://www.npmjs.com/package/winston#logging-levels">logging level</a>.</td>
+							<td><code>debug</code></td>
+						</tr>
+						<tr>
+							<td><code>MONGO_DB</code></td>
+							<td>The name of the database to connect to.</td>
+							<td><code>myDatabase</code></td>
+						</tr>
+						<tr>
+							<td><code>MONGO_IS_COSMOSDB</code></td>
+							<td><code>true</code>, if server runs as <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/introduction">Cosmos DB</a> instance.</td>
+							<td><code>true</code></td>
+						</tr>
+						<tr>
+							<td><code>MONGO_URL</code></td>
+							<td>The connection URL.</td>
+							<td><code>mongodb://mongo.example.com:27017</code></td>
+						</tr>
+						<tr>
 							<td><code>NATS_CLUSTER_ID</code></td>
 							<td>The name of the cluster, that contains all microservices.</td>
 							<td><code>my-cluster</code></td>
@@ -240,12 +260,51 @@
 				<a href="#diagnostics" id="diagnostics" style="color: inherit; text-decoration: none;">
 					<h3>Diagnostics</h3>
 				</a>
+				<p>The library uses <a href="https://www.npmjs.com/package/winston">winston</a> as logger:</p>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">logger</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@egomobile/microservices&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #001080">logger</span><span style="color: #000000">.</span><span style="color: #795E26">info</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;Hello e.GO!&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">    </span><span style="color: #001080">file:</span><span style="color: #000000"> </span><span style="color: #001080">__filename</span>
+<span style="color: #000000">});</span>
+</code></pre>
+				<a href="#application-insights" id="application-insights" style="color: inherit; text-decoration: none;">
+					<h4>Application Insights</h4>
+				</a>
 				<p>Setup <a href="https://www.npmjs.com/package/applicationinsights">Application Insights</a>:</p>
 				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">setupApplicationInsights</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@egomobile/microservices&#039;</span><span style="color: #000000">;</span>
 
 <span style="color: #008000">// you must define &#039;APPLICATION_INSIGHTS_KEY&#039;</span>
 <span style="color: #008000">// and must not be in local development context</span>
 <span style="color: #795E26">setupApplicationInsights</span><span style="color: #000000">();</span>
+</code></pre>
+				<a href="#mongodb" id="mongodb" style="color: inherit; text-decoration: none;">
+					<h3>MongoDB</h3>
+				</a>
+				<p>Use <code>MongoDatabase</code> class, which has simple support to handle <a href="https://www.npmjs.com/package/mongodb">MongoDB</a> connections:</p>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">MongoDatabase</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@egomobile/microservices&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">mongo</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">MongoDatabase</span><span style="color: #000000">();</span>
+
+<span style="color: #008000">// insert</span>
+<span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">mongo</span><span style="color: #000000">.</span><span style="color: #795E26">insert</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;myCollection&#039;</span><span style="color: #000000">, [{</span>
+<span style="color: #000000">    </span><span style="color: #001080">uuid:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;8d41b8fc-2110-4b05-91ff-0a40c007be9d&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">last_name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Kloubert&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">first_name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Marcel&#039;</span>
+<span style="color: #000000">}, {</span>
+<span style="color: #000000">    </span><span style="color: #001080">uuid:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;90b7191d-44ce-43c9-a6e3-b777a8b9c8a6&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">last_name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;M&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">first_name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Tanja&#039;</span>
+<span style="color: #000000">}]);</span>
+
+<span style="color: #008000">// find</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">docs</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">mongo</span><span style="color: #000000">.</span><span style="color: #795E26">find</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;myCollection&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">    </span><span style="color: #001080">first_name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Tanja&#039;</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #008000">// count</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">docsCount</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">mongo</span><span style="color: #000000">.</span><span style="color: #795E26">count</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;myCollection&#039;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">    </span><span style="color: #001080">first_name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Marcel&#039;</span>
+<span style="color: #000000">});</span>
 </code></pre>
 				<a href="#nats" id="nats" style="color: inherit; text-decoration: none;">
 					<h3>NATS</h3>
@@ -306,6 +365,9 @@
 						<a href="modules.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="modules/api.html">api</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="modules/auth.html">auth</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -321,10 +383,19 @@
 						<a href="modules/constants.html">constants</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="modules/db.html">db</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/db_mongo.html">db/mongo</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="modules/diagnostics.html">diagnostics</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/diagnostics_azure.html">diagnostics/azure</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/diagnostics_logger.html">diagnostics/logger</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/express.html">express</a>
@@ -364,6 +435,7 @@
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">

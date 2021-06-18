@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>nats/listener | @egomobile/microservices</title>
+	<title>db/mongo | @egomobile/microservices</title>
 	<meta name="description" content="Documentation for @egomobile/microservices">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@egomobile/microservices</a>
 				</li>
 				<li>
-					<a href="nats_listener.html">nats/listener</a>
+					<a href="db_mongo.html">db/mongo</a>
 				</li>
 			</ul>
-			<h1>Module nats/listener</h1>
+			<h1>Module db/mongo</h1>
 		</div>
 	</div>
 </header>
@@ -72,19 +72,21 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/nats_listener.natslistener.html" class="tsd-kind-icon">Nats<wbr>Listener</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/db_mongo.mongodatabase.html" class="tsd-kind-icon">Mongo<wbr>Database</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/nats_listener.inatseventmessagehandlercontext.html" class="tsd-kind-icon">INats<wbr>Event<wbr>Message<wbr>Handler<wbr>Context</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/db_mongo.imongodatabaseoptions.html" class="tsd-kind-icon">IMongo<wbr>Database<wbr>Options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="nats_listener.html#onnatseventmessagehandler" class="tsd-kind-icon">On<wbr>Nats<wbr>Event<wbr>Message<wbr>Handler</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="db_mongo.html#imongoschema" class="tsd-kind-icon">IMongo<wbr>Schema</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="db_mongo.html#mongodocument" class="tsd-kind-icon">Mongo<wbr>Document</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="db_mongo.html#withmongoclientaction" class="tsd-kind-icon">With<wbr>Mongo<wbr>Client<wbr>Action</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,29 +94,84 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
-					<a name="onnatseventmessagehandler" class="tsd-anchor"></a>
-					<h3>On<wbr>Nats<wbr>Event<wbr>Message<wbr>Handler</h3>
-					<div class="tsd-signature tsd-kind-icon">On<wbr>Nats<wbr>Event<wbr>Message<wbr>Handler&lt;TEvent&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="../interfaces/nats_listener.inatseventmessagehandlercontext.html" class="tsd-signature-type" data-tsd-kind="Interface">INatsEventMessageHandlerContext</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TEvent</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="imongoschema" class="tsd-anchor"></a>
+					<h3>IMongo<wbr>Schema</h3>
+					<div class="tsd-signature tsd-kind-icon">IMongo<wbr>Schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/nats/listener.ts#L54">src/nats/listener.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L46">src/db/mongo.ts:46</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Handles a message.</p>
+							<p>A Mongo schema.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The list of props and values.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="mongodocument" class="tsd-anchor"></a>
+					<h3>Mongo<wbr>Document</h3>
+					<div class="tsd-signature tsd-kind-icon">Mongo<wbr>Document&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L41">src/db/mongo.ts:41</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A MongoDB document.</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="withmongoclientaction" class="tsd-anchor"></a>
+					<h3>With<wbr>Mongo<wbr>Client<wbr>Action</h3>
+					<div class="tsd-signature tsd-kind-icon">With<wbr>Mongo<wbr>Client<wbr>Action&lt;TResult&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>client<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MongoDBClient</span>, db<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MongoDb</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L61">src/db/mongo.ts:61</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Action for &#39;withClient()&#39; method of &#39;MongoDatabase&#39; class.</p>
 						</div>
 						<dl class="tsd-comment-tags">
 							<dt>param</dt>
-							<dd><p>The context.</p>
+							<dd><p>The open client.</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>The underlying default database instance.</p>
+							</dd>
+							<dt>returns</dt>
+							<dd><p>The promise with the result.</p>
 							</dd>
 						</dl>
 					</div>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
 					<ul class="tsd-type-parameters">
 						<li>
-							<h4>TEvent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span> = <span class="tsd-signature-type">any</span></h4>
+							<h4>TResult<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span> = <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 					<div class="tsd-type-declaration">
@@ -122,17 +179,20 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="../interfaces/nats_listener.inatseventmessagehandlercontext.html" class="tsd-signature-type" data-tsd-kind="Interface">INatsEventMessageHandlerContext</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TEvent</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>client<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MongoDBClient</span>, db<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MongoDb</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>context: <a href="../interfaces/nats_listener.inatseventmessagehandlercontext.html" class="tsd-signature-type" data-tsd-kind="Interface">INatsEventMessageHandlerContext</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TEvent</span><span class="tsd-signature-symbol">&gt;</span></h5>
+												<h5>client: <span class="tsd-signature-type">MongoDBClient</span></h5>
+											</li>
+											<li>
+												<h5>db: <span class="tsd-signature-type">MongoDb</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
 									</li>
 								</ul>
 							</li>
@@ -168,7 +228,7 @@
 					<li class=" tsd-kind-module">
 						<a href="db.html">db</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="db_mongo.html">db/mongo</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -192,7 +252,7 @@
 					<li class=" tsd-kind-module">
 						<a href="nats_client.html">nats/client</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="nats_listener.html">nats/listener</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -205,14 +265,20 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/nats_listener.natslistener.html" class="tsd-kind-icon">Nats<wbr>Listener</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/db_mongo.mongodatabase.html" class="tsd-kind-icon">Mongo<wbr>Database</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../interfaces/nats_listener.inatseventmessagehandlercontext.html" class="tsd-kind-icon">INats<wbr>Event<wbr>Message<wbr>Handler<wbr>Context</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/db_mongo.imongodatabaseoptions.html" class="tsd-kind-icon">IMongo<wbr>Database<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="db_mongo.html#imongoschema" class="tsd-kind-icon">IMongo<wbr>Schema</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="nats_listener.html#onnatseventmessagehandler" class="tsd-kind-icon">On<wbr>Nats<wbr>Event<wbr>Message<wbr>Handler</a>
+						<a href="db_mongo.html#mongodocument" class="tsd-kind-icon">Mongo<wbr>Document</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="db_mongo.html#withmongoclientaction" class="tsd-kind-icon">With<wbr>Mongo<wbr>Client<wbr>Action</a>
 					</li>
 				</ul>
 			</nav>
