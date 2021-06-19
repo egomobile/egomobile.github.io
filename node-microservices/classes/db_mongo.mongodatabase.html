@@ -96,14 +96,13 @@
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="db_mongo.mongodatabase.html#iscosmosdb" class="tsd-kind-icon">is<wbr>CosmosDB</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="db_mongo.mongodatabase.html#mongodb" class="tsd-kind-icon">mongoDB</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="db_mongo.mongodatabase.html#mongourl" class="tsd-kind-icon">mongo<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="db_mongo.mongodatabase.html#options" class="tsd-kind-icon">options</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="db_mongo.mongodatabase.html#checkoptionsorthrow" class="tsd-kind-icon">check<wbr>Options<wbr>OrThrow</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="db_mongo.mongodatabase.html#count" class="tsd-kind-icon">count</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="db_mongo.mongodatabase.html#find" class="tsd-kind-icon">find</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="db_mongo.mongodatabase.html#findone" class="tsd-kind-icon">find<wbr>One</a></li>
@@ -126,7 +125,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L74">src/db/mongo.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/db/mongo.ts#L68">src/db/mongo.ts:68</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -148,38 +147,35 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="iscosmosdb" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>CosmosDB</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>CosmosDB<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="options" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/db_mongo.imongodatabaseoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">IMongoDatabaseOptions</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L72">src/db/mongo.ts:72</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="mongodb" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> mongoDB</h3>
-					<div class="tsd-signature tsd-kind-icon">mongoDB<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L73">src/db/mongo.ts:73</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="mongourl" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> mongo<wbr>Url</h3>
-					<div class="tsd-signature tsd-kind-icon">mongo<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L74">src/db/mongo.ts:74</a></li>
+							<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/db/mongo.ts#L68">src/db/mongo.ts:68</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="checkoptionsorthrow" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> check<wbr>Options<wbr>OrThrow</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Options<wbr>OrThrow<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/db/mongo.ts#L105">src/db/mongo.ts:105</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 					<a name="count" class="tsd-anchor"></a>
 					<h3>count</h3>
@@ -190,7 +186,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L117">src/db/mongo.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/db/mongo.ts#L126">src/db/mongo.ts:126</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -234,7 +230,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L146">src/db/mongo.ts:146</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/db/mongo.ts#L155">src/db/mongo.ts:155</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -281,7 +277,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L169">src/db/mongo.ts:169</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/db/mongo.ts#L178">src/db/mongo.ts:178</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -328,7 +324,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L191">src/db/mongo.ts:191</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/db/mongo.ts#L200">src/db/mongo.ts:200</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -375,7 +371,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/db/mongo.ts#L208">src/db/mongo.ts:208</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/db/mongo.ts#L217">src/db/mongo.ts:217</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -446,6 +442,9 @@
 						<a href="../modules/diagnostics_logger.html">diagnostics/logger</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/env.html">env</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/express.html">express</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -479,13 +478,10 @@
 								<a href="db_mongo.mongodatabase.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="db_mongo.mongodatabase.html#iscosmosdb" class="tsd-kind-icon">is<wbr>CosmosDB</a>
+								<a href="db_mongo.mongodatabase.html#options" class="tsd-kind-icon">options</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="db_mongo.mongodatabase.html#mongodb" class="tsd-kind-icon">mongoDB</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="db_mongo.mongodatabase.html#mongourl" class="tsd-kind-icon">mongo<wbr>Url</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="db_mongo.mongodatabase.html#checkoptionsorthrow" class="tsd-kind-icon">check<wbr>Options<wbr>OrThrow</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 								<a href="db_mongo.mongodatabase.html#count" class="tsd-kind-icon">count</a>
@@ -545,6 +541,7 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 		</div>
 	</div>

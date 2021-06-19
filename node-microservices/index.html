@@ -232,6 +232,11 @@
 							<td><code>true</code></td>
 						</tr>
 						<tr>
+							<td><code>MONGO_IS_LAZY</code></td>
+							<td>If <code>true</code>, <code>MongoDatabase</code> will throw an error, if not enough configuration data is available, the first time an instance of it is used, instead the time an instance of it is created.</td>
+							<td><code>true</code></td>
+						</tr>
+						<tr>
 							<td><code>MONGO_URL</code></td>
 							<td>The connection URL.</td>
 							<td><code>mongodb://mongo.example.com:27017</code></td>
@@ -396,6 +401,9 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/diagnostics_logger.html">diagnostics/logger</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/env.html">env</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/express.html">express</a>

@@ -65,29 +65,6 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>This file is part of the @egomobile/microservices distribution.
-						Copyright (c) Next.e.GO Mobile SE, Aachen, Germany (<a href="https://e-go-mobile.com/">https://e-go-mobile.com/</a>)</p>
-					</div>
-					<dl class="tsd-comment-tags">
-						<dt>egomobile/microservices</dt>
-						<dd><p>is free software: you can redistribute it and/or modify
-								it under the terms of the GNU Lesser General Public License as
-							published by the Free Software Foundation, version 3.</p>
-						</dd>
-						<dt>egomobile/microservices</dt>
-						<dd><p>is distributed in the hope that it will be useful, but
-								WITHOUT ANY WARRANTY; without even the implied warranty of
-								MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-							Lesser General Public License for more details.</p>
-							<p>You should have received a copy of the GNU Lesser General Public License
-							along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
-						</dd>
-					</dl>
-				</div>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -95,7 +72,14 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#isdev" class="tsd-kind-icon">is<wbr>Dev</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#isjest" class="tsd-kind-icon">is<wbr>Jest</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#islocaldev" class="tsd-kind-icon">is<wbr>Local<wbr>Dev</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#isnil" class="tsd-kind-icon">is<wbr>Nil</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#isnodeenv" class="tsd-kind-icon">is<wbr>Node<wbr>Env</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#isprod" class="tsd-kind-icon">is<wbr>Prod</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#istest" class="tsd-kind-icon">is<wbr>Test</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#istruely" class="tsd-kind-icon">is<wbr>Truely</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="utils.html#tick" class="tsd-kind-icon">tick</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="utils.html#tostringsafe" class="tsd-kind-icon">to<wbr>String<wbr>Safe</a></li>
 							</ul>
@@ -106,6 +90,75 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isdev" class="tsd-anchor"></a>
+					<h3>is<wbr>Dev</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Dev<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L27">src/utils.ts:27</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if NODE_ENV has a value of &#39;development&#39;.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Has a value of &#39;development&#39; or not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isjest" class="tsd-anchor"></a>
+					<h3>is<wbr>Jest</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Jest<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L36">src/utils.ts:36</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if app runs in Jest environment or not.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Is running in Jest environment or not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="islocaldev" class="tsd-anchor"></a>
+					<h3>is<wbr>Local<wbr>Dev</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Local<wbr>Dev<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L45">src/utils.ts:45</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if app is running in local development mode or not.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Runs in local development mode or not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="isnil" class="tsd-anchor"></a>
 					<h3>is<wbr>Nil</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -115,7 +168,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/utils.ts#L25">src/utils.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L56">src/utils.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -137,6 +190,117 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isnodeenv" class="tsd-anchor"></a>
+					<h3>is<wbr>Node<wbr>Env</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Node<wbr>Env<span class="tsd-signature-symbol">(</span>envName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L68">src/utils.ts:68</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if NODE_ENV environment variable has a specific value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>envName: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The name to check.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Has the value of envName or not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isprod" class="tsd-anchor"></a>
+					<h3>is<wbr>Prod</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Prod<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L88">src/utils.ts:88</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if NODE_ENV has a value of &#39;production&#39;.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Has a value of &#39;production&#39; or not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="istest" class="tsd-anchor"></a>
+					<h3>is<wbr>Test</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Test<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L97">src/utils.ts:97</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if NODE_ENV has a value of &#39;test&#39;.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Has a value of &#39;test&#39; or not.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="istruely" class="tsd-anchor"></a>
+					<h3>is<wbr>Truely</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Truely<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L109">src/utils.ts:109</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Handles a value as string and checks if it prepresents a (true).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>val: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The input value.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Can be handled as (true) value.
+							Possible values are: &#39;1&#39;, &#39;true&#39;, &#39;y&#39;, &#39;yes&#39;</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="tick" class="tsd-anchor"></a>
 					<h3>tick</h3>
@@ -147,7 +311,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/utils.ts#L38">src/utils.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L130">src/utils.ts:130</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -206,7 +370,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/33645a0/src/utils.ts#L66">src/utils.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/utils.ts#L158">src/utils.ts:158</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -270,6 +434,9 @@
 						<a href="diagnostics_logger.html">diagnostics/logger</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="env.html">env</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="express.html">express</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -295,7 +462,28 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="utils.html#isdev" class="tsd-kind-icon">is<wbr>Dev</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="utils.html#isjest" class="tsd-kind-icon">is<wbr>Jest</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="utils.html#islocaldev" class="tsd-kind-icon">is<wbr>Local<wbr>Dev</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="utils.html#isnil" class="tsd-kind-icon">is<wbr>Nil</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="utils.html#isnodeenv" class="tsd-kind-icon">is<wbr>Node<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="utils.html#isprod" class="tsd-kind-icon">is<wbr>Prod</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="utils.html#istest" class="tsd-kind-icon">is<wbr>Test</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="utils.html#istruely" class="tsd-kind-icon">is<wbr>Truely</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="utils.html#tick" class="tsd-kind-icon">tick</a>
