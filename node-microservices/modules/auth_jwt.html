@@ -78,6 +78,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="auth_jwt.html#decodejwt" class="tsd-kind-icon">decodeJWT</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="auth_jwt.html#signjwt" class="tsd-kind-icon">signJWT</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="auth_jwt.html#verifyjwt" class="tsd-kind-icon">verifyJWT</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="auth_jwt.html#withjwt" class="tsd-kind-icon">withJWT</a></li>
@@ -88,6 +89,47 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="decodejwt" class="tsd-anchor"></a>
+					<h3>decodeJWT</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">decodeJWT&lt;TToken&gt;<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Optional</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DecodeOptions</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/7016cab/src/auth/jwt.ts#L52">src/auth/jwt.ts:52</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Decodes a JWT and returns it, if succeeded.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>TToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span> = <span class="tsd-signature-type">any</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>token: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The token as string.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">Optional</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DecodeOptions</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></h4>
+							<p>The decoded token, or (false) if failed.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="signjwt" class="tsd-anchor"></a>
 					<h3>signJWT</h3>
@@ -98,7 +140,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/auth/jwt.ts#L62">src/auth/jwt.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/7016cab/src/auth/jwt.ts#L84">src/auth/jwt.ts:84</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -127,13 +169,13 @@
 					<a name="verifyjwt" class="tsd-anchor"></a>
 					<h3>verifyJWT</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">verifyJWT&lt;TToken&gt;<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></li>
+						<li class="tsd-signature tsd-kind-icon">verifyJWT&lt;TToken&gt;<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Optional</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">VerifyOptions</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/auth/jwt.ts#L73">src/auth/jwt.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/7016cab/src/auth/jwt.ts#L99">src/auth/jwt.ts:99</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -155,6 +197,9 @@
 										<p>The token as string.</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">Optional</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">VerifyOptions</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TToken</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></h4>
 							<p>The decoded token, or (false), if verification failed.</p>
@@ -171,7 +216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/0c738af/src/auth/jwt.ts#L91">src/auth/jwt.ts:91</a></li>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/7016cab/src/auth/jwt.ts#L120">src/auth/jwt.ts:120</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -261,6 +306,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/auth_jwt.iwithjwtoptions.html" class="tsd-kind-icon">IWithJWTOptions</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="auth_jwt.html#decodejwt" class="tsd-kind-icon">decodeJWT</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="auth_jwt.html#signjwt" class="tsd-kind-icon">signJWT</a>
