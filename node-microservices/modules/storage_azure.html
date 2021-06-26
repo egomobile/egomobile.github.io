@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>nats/publisher | @egomobile/microservices</title>
+	<title>storage/azure | @egomobile/microservices</title>
 	<meta name="description" content="Documentation for @egomobile/microservices">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@egomobile/microservices</a>
 				</li>
 				<li>
-					<a href="nats_publisher.html">nats/publisher</a>
+					<a href="storage_azure.html">storage/azure</a>
 				</li>
 			</ul>
-			<h1>Module nats/publisher</h1>
+			<h1>Module storage/azure</h1>
 		</div>
 	</div>
 </header>
@@ -70,12 +70,77 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/nats_publisher.natspublisher.html" class="tsd-kind-icon">Nats<wbr>Publisher</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="storage_azure.html#getazureblobstorageclient" class="tsd-kind-icon">get<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Client</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="storage_azure.html#getazureblobstoragecontainerclient" class="tsd-kind-icon">get<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Container<wbr>Client</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getazureblobstorageclient" class="tsd-anchor"></a>
+					<h3>get<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Client</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Client<span class="tsd-signature-symbol">(</span>connection<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BlobServiceClient</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/ce722a9/src/storage/azure.ts#L10">src/storage/azure.ts:10</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a blob storage client.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>connection: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;1&#x27;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BlobServiceClient</span></h4>
+							<p>The new client.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="getazureblobstoragecontainerclient" class="tsd-anchor"></a>
+					<h3>get<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Container<wbr>Client</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Container<wbr>Client<span class="tsd-signature-symbol">(</span>connection<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, container<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContainerClient</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/egomobile/node-microservices/blob/ce722a9/src/storage/azure.ts#L31">src/storage/azure.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a blob storage container client.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>connection: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;1&#x27;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> container: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ContainerClient</span></h4>
+							<p>The new client.</p>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -142,13 +207,13 @@
 					<li class=" tsd-kind-module">
 						<a href="nats_listener.html">nats/listener</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="nats_publisher.html">nats/publisher</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="storage.html">storage</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="storage_azure.html">storage/azure</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -158,8 +223,11 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/nats_publisher.natspublisher.html" class="tsd-kind-icon">Nats<wbr>Publisher</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="storage_azure.html#getazureblobstorageclient" class="tsd-kind-icon">get<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Client</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="storage_azure.html#getazureblobstoragecontainerclient" class="tsd-kind-icon">get<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Container<wbr>Client</a>
 					</li>
 				</ul>
 			</nav>
